@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (width<550px) {
+            .main {
+                width: 100%;
+                height: 100%;
+                border: 2px solid;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                background-color: rgb(148, 231, 204);
+                box-shadow: 2px 2px 25px darkblue;
+            }
+
+            #img {
+                width: 50%;
+                height: 98%;
+                margin-left: 70px;
+                margin-top: 30px;
+                box-shadow: 2px 2px 25px red;   
+            }
+
+            #img1 {
+                width: 40%;
+                margin-left: 90px;
+                margin-top: -60px;
+                box-shadow: 2px 2px 25px purple;
+            }
+
+            .child1 {
+                /* grid-row: 1/2; */
+
+            }
+
+            .music {
+                /* grid-row: 2/3; */
+                margin-top: 80px;
+                margin-left: 15px;
+            }
+
+            .music1 {
+                /* grid-row: 2/3; */
+                margin-top: 50px;
+                margin-left: 15px;
+            }
+
+            .move {
+                /* grid-row: 3/4; */
+                /* margin-top: 20px; */
+            }
+
+            .move1 {
+                display: flex;
+                flex-direction: row;
+                /* justify-content: center; */
+                gap: 10px;
+                height: 15vh;
+                align-items: center;
+                margin-left: 80px;
+            }
+        }
+
+
+        .move {
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            gap: 10px;
+            height: 1vh;
+            align-items: center;
+            margin-left: 80px;
+        }
+
+        .a {
+            width: 20px;
+            height: 10px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .b {
+            width: 10px;
+            height: 50px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: b;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .c {
+
+            width: 10px;
+            height: 80px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: c;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .d {
+
+            width: 10px;
+            height: 100px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: d;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .e {
+
+            width: 10px;
+            height: 80px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: e;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .f {
+
+            width: 10px;
+            height: 50px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: f;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .g {
+
+            width: 10px;
+            height: 30px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: g;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .h {
+
+            width: 20px;
+            height: 10px;
+            background-color: black;
+            border-radius: 20px;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        .aa {
+
+            width: 10px;
+            height: 30px;
+            background-color: black;
+            border-radius: 20px;
+            animation-name: aa;
+            box-shadow: 2px 2px 25px saddlebrown;
+        }
+
+        @keyframes aa {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 20px;
+            }
+
+        }
+
+        @keyframes b {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 25px;
+            }
+
+        }
+
+        @keyframes c {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 100px;
+            }
+
+        }
+
+        @keyframes d {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 60px;
+            }
+
+        }
+
+        @keyframes e {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 40px;
+            }
+
+        }
+
+        @keyframes f {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 60px;
+            }
+
+        }
+
+        @keyframes g {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                height: 50px;
+            }
+
+        }
+
+        .aa,
+        .b,
+        .c,
+        .d,
+        .e,
+        .f,
+        .g {
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        @media screen and (width>550px) {
+            .main {
+                width: 100%;
+                height: 40%;
+                border: 2px solid;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                background-color: rgb(148, 231, 204);
+                box-shadow: 2px 2px 25px darkorange
+            }
+
+            #img {
+                width: 30%;
+                height: 98%;
+                margin-left: 80px;
+                margin-top: 20px;
+                box-shadow: 2px 2px 25px red;
+            }
+
+            #img1 {
+                width: 30%;
+                margin-left: 80px;
+                margin-top: 20px;
+                box-shadow: 2px 2px 25px purple
+            }
+
+            .child1 {
+                grid-row: 1/2;
+
+            }
+
+            .music {
+                grid-row: 2/3;
+                margin-top: 80px;
+                margin-left: 30px;
+            }
+
+            .music1 {
+                grid-row: 2/3;
+                margin-top: 80px;
+                margin-left: 30px;
+            }
+
+            .move {
+                grid-row: 3/4;
+            }
+
+            .move1 {
+                grid-row: 3/4;
+            }
+
+            .move {
+                display: flex;
+                flex-direction: row;
+                /* justify-content: center; */
+                gap: 10px;
+                height: 1vh;
+                align-items: center;
+                margin-left: 80px; 
+            }
+
+            .move1 {
+
+                display: flex;
+                flex-direction: row;
+                /* justify-content: center; */
+                gap: 10px;
+                height: 1vh;
+                align-items: center;
+                margin-left: 80px;
+            }
+
+            .a {
+                width: 20px;
+                height: 10px;
+                background-color: black;
+                border-radius: 20px;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .b {
+                width: 10px;
+                height: 50px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: b;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .c {
+
+                width: 10px;
+                height: 80px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: c;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .d {
+
+                width: 10px;
+                height: 100px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: d;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .e {
+
+                width: 10px;
+                height: 80px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: e;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .f {
+
+                width: 10px;
+                height: 50px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: f;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .g {
+
+                width: 10px;
+                height: 30px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: g;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .h {
+
+                width: 20px;
+                height: 10px;
+                background-color: black;
+                border-radius: 20px;
+                box-shadow: 2px 2px 25px saddlebrown;
+            }
+
+            .aa {
+
+                width: 10px;
+                height: 30px;
+                background-color: black;
+                border-radius: 20px;
+                animation-name: aa;
+            }
+
+            @keyframes aa {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 20px;
+                }
+
+            }
+
+            @keyframes b {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 25px;
+                }
+
+            }
+
+            @keyframes c {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 100px;
+                }
+
+            }
+
+            @keyframes d {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 60px;
+                }
+
+            }
+
+            @keyframes e {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 40px;
+                }
+
+            }
+
+            @keyframes f {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 60px;
+                }
+
+            }
+
+            @keyframes g {
+                from {
+                    transform: translate(0px);
+                }
+
+                to {
+                    height: 50px;
+                }
+
+            }
+
+            .aa,
+            .b,
+            .c,
+            .d,
+            .e,
+            .f,
+            .g {
+                animation-duration: 0.3s;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child1">
+            <img src="./Maharshi-Telugu-2019-20190515163142-500x500.jpg" alt="" id="img">
+        </div>
+        <div class="music">
+            <audio controls>
+                <source src="./[iSongs.info] 08 - Nuvvani Idhi Needani.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="move">
+            <nav class="a"></nav>
+            <nav class="aa"></nav>
+            <nav class="b"></nav>
+            <nav class="c"></nav>
+            <nav class="d"></nav>
+            <nav class="e"></nav>
+            <nav class="f"></nav>
+            <nav class="g"></nav>
+            <nav class="h"></nav>
+        </div>
+        <div class="child2">
+            <img src="./images1.jpg" alt="" id="img1">
+        </div>
+        <div class="music1">
+            <audio controls>
+                <source src="./Dum Masala.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="move1">
+            <nav class="a"></nav>
+            <nav class="aa"></nav>
+            <nav class="b"></nav>
+            <nav class="c"></nav>
+            <nav class="d"></nav>
+            <nav class="e"></nav>
+            <nav class="f"></nav>
+            <nav class="g"></nav>
+            <nav class="h"></nav>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

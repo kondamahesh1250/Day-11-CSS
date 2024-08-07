@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @media screen and (width>360px) {
+            body{
+                display: flex;
+                justify-content: center;
+                height: 100vh;
+                align-items: center;
+            }
+        .main {
+            justify-content: space-around;
+            width: 400px;
+            height: 550px;
+            border: 1px solid;
+            box-shadow: 2px 2px 25px darkgoldenrod;
+        }
+
+        .child1 {
+            text-align: center;
+        }
+
+        .child2 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 50vh;
+            align-items: end;
+            display: none;
+
+        }
+
+        input {
+            width: 300px;
+            height: 35px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 25px chocolate;
+            margin-left: 20px;
+        }
+
+        button {
+            position: relative;
+            right: 45px;
+            border-radius: 10px;
+            border: white;
+            background-color: white;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .a {
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: blue;
+            animation-name: bluecolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px purple;
+        }
+
+        @keyframes bluecolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 120px;
+                /* border-radius: 20px; */
+            }
+        }
+
+        .b {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: red;
+            animation-name: redcolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.4s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px red;
+        }
+
+        @keyframes redcolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 100px;
+                border-radius: 20px;
+            }
+        }
+
+        .c {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: orange;
+            animation-name: orangecolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.6s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px darkcyan;
+        }
+
+        @keyframes orangecolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 120px;
+                border-radius: 20px;
+            }
+        }
+
+        .d {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: green;
+            animation-name: greencolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.8s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px seagreen;
+        }
+
+        @keyframes greencolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 100px;
+                border-radius: 20px;
+            }
+        }
+
+        .voice:focus-within~.child2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 50vh;
+            align-items: center;
+           
+            
+        }
+    }
+        @media screen and (width<360px) {
+            .main {
+            width: 45vh;
+            height: 60vh;
+            border: 1px solid;
+            box-shadow: 2px 2px 25px darkgoldenrod;
+        }
+
+        .child1 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .child2 {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 1vh;
+            align-items: flex-start;
+            display: none;
+
+        }
+
+        input {
+            width: 300px;
+            height: 35px;
+            border-radius: 20px;
+            margin-left: 5px;
+            box-shadow: 2px 2px 25px chocolate;
+        }
+
+        button {
+            position: relative;
+            left: 130px;
+            bottom: 30px;
+            border-radius: 10px;
+            border: white;
+            background-color: white;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .a {
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: blue;
+            animation-name: bluecolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px purple;
+        }
+
+        @keyframes bluecolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 120px;
+                /* border-radius: 20px; */
+            }
+        }
+
+        .b {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: red;
+            animation-name: redcolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.4s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px red;
+        }
+
+        @keyframes redcolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 100px;
+                border-radius: 20px;
+            }
+        }
+
+        .c {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: orange;
+            animation-name: orangecolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.6s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px darkcyan;
+        }
+
+        @keyframes orangecolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 120px;
+                border-radius: 20px;
+            }
+        }
+
+        .d {
+
+            width: 30px;
+            height: 30px;
+            border-radius: 80px;
+            background-color: green;
+            animation-name: greencolor;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.6s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.8s;
+            animation-iteration-count: infinite;
+            box-shadow: 2px 2px 25px seagreen;
+        }
+
+        @keyframes greencolor {
+            from {
+                transform: translate(0px);
+            }
+
+            to {
+                /* transform: scaleY(5); */
+                height: 100px;
+                border-radius: 20px;
+            }
+        }
+
+        .voice:focus-within~.child2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 50vh;
+            align-items: center;
+           
+            
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="child1">
+            <img src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
+                alt="" width="50%" style="margin-right: 10px;">
+            <input type="text" name="" id="" placeholder="Search">
+            <button class="voice"><i class="fa-solid fa-microphone mic"></i></button>
+            <br><br>
+            <div class="child2">
+                <h4><i>Listening...</i></h4>
+                <nav class="a"></nav>
+                <nav class="b"></nav>
+                <nav class="c"></nav>
+                <nav class="d"></nav>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
